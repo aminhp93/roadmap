@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-950 text-gray-100 antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Animate fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Light Theme System Overrides */
+.light-theme {
+  color-scheme: light;
+}
+
+.light-theme,
+.light-theme body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.light-theme aside {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+}
+
+.light-theme main {
+  background-color: #f8fafc;
+}
+
+/* Inputs & Select Controls */
+.light-theme input[type="text"],
+.light-theme input[type="date"],
+.light-theme select,
+.light-theme textarea {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+.light-theme input::placeholder {
+  color: #94a3b8;
+}
+
+/* Custom Scrollbars */
+.light-theme ::-webkit-scrollbar-track {
+  background-color: #f1f5f9;
+}
+.light-theme ::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+}
